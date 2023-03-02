@@ -1,0 +1,31 @@
+{
+  "name": "@rookie-ui/element-ui",
+  "version": "1.0.0",
+  "description": "rookie-ui二次封装element-ui组件库",
+  "main": "dist/rookie-ui/js",
+  "module": "dist/rookie-ui.mjs",
+  "scripts": {
+    "serve": "vite serve",
+    "build": "vite build",
+    "build:docs": "vite build --mode docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-resize-detector": "^1.2.4",
+    "lodash-es": "^4.17.21"
+  },
+  "peerDependencies": {
+    "element-ui": "^2.15.13",
+    "vue": "^2.7.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "^2.2.0",
+    "element-ui": "^2.15.13",
+    "sass": "^1.58.3",
+    "vite": "^4.1.4",
+    "vue": "^2.7.14",
+    "vue-router": "^3.6.5"
+  }
+}

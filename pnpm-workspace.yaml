@@ -1,0 +1,3 @@
+packages:
+  - 'packages/*' ## element-ui element-plus
+  - 'docs' ## 文档
