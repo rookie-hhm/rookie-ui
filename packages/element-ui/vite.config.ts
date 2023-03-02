@@ -26,7 +26,9 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         external: [...Object.keys(pkg.dependencies), ...Object.keys((pkg.peerDependencies))],
         output: {
           globals: {
-            vue: 'Vue'
+            vue: 'Vue',
+            'lodash-es': 'lodashEs',
+            'element-resize-detector': 'elementResizeDetectorMaker'
           }
         }
       },
