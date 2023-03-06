@@ -4,14 +4,39 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vite serve",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:test": "cross-env NODE_ENV=TEST BUILD_TYPE=SINGLE vite build --env TYPE=TEST"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "@fullcalendar/core": "^5.10.1",
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
+    "async-validator": "^4.2.5",
+    "axios": "^0.24.0",
+    "lodash": "^4.17.21",
+    "wangeditor": "^4.7.15"
+  },
+  "peerDependencies": {
     "element-plus": "^2.2.32",
+    "vue": "^3.2.36"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/mockjs": "^1.0.7",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "element-plus": "^2.2.32",
+    "mockjs": "^1.1.0",
+    "typescript": "4.9.3",
+    "vite": "^4.1.4",
     "vue": "^3.2.36",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "vue-tsc": "^1.2.0"
   }
 }
