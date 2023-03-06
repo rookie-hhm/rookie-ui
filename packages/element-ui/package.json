@@ -15,6 +15,7 @@
     "build": "vite build",
     "build:docs": "vite build --mode docs"
   },
+  "sideEffects": false,
   "keywords": [],
   "author": "",
   "license": "ISC",

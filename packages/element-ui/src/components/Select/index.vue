@@ -1,5 +1,6 @@
 <template>
   <el-select
+    class="my-select-wrapper"
     v-bind="$attrs"
     v-on="$listeners"
     :value="value"
