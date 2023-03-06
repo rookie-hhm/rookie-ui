@@ -5,11 +5,11 @@ import router from './router'
 import { Table } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // import RookieUI from '@rookie-ui/element-ui'
-import { Form } from '@rookie-ui/element-ui'
+import { Select } from '../../dist/rookie-ui.mjs'
 Vue.config.productionTip = false
 Vue.use(Table)
   // .use(RookieUI)
-  .use(Form)
+  .use(Select)
 new Vue({
   router,
   render: h => h(App)

@@ -5,18 +5,18 @@ import Select from "@/components/Select";
 import Dialog from '@/components/Dialog'
 
 const components = [
-  Table,
+  // Table,
   Pagination,
-  Form,
+  // Form,
   Select,
-  Dialog
+  // Dialog
 ]
 export {
-  Table,
+  // Table,
   Pagination,
-  Form,
+  // Form,
   Select,
-  Dialog
+  // Dialog
 }
 
 export default {
