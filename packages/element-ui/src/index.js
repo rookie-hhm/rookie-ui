@@ -1,22 +1,22 @@
-import Table from "@/components/Table";
-import Pagination from "@/components/Pagination";
-import Form from "@/components/Form";
-import Select from "@/components/Select";
-import Dialog from '@/components/Dialog'
+import Table from "@/components/table";
+import Pagination from "@/components/pagination";
+import Form from "@/components/form";
+import Select from "@/components/select";
+import Dialog from '@/components/dialog'
 
 const components = [
-  // Table,
+  Table,
   Pagination,
-  // Form,
+  Form,
   Select,
-  // Dialog
+  Dialog
 ]
 export {
-  // Table,
+  Table,
   Pagination,
-  // Form,
+  Form,
   Select,
-  // Dialog
+  Dialog
 }
 
 export default {

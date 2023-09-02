@@ -1,19 +1,26 @@
 {
   "name": "@rookie-ui/element-ui",
-  "version": "1.0.3",
+  "version": "1.0.10",
   "description": "rookie-ui二次封装element-ui组件库",
-  "main": "dist/rookie-ui.js",
-  "module": "dist/rookie-ui.mjs",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "exports": {
     ".": {
-      "import": "./dist/rookie-ui.mjs",
-      "require": "./dist/rookie-ui.js"
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
     }
   },
   "scripts": {
     "serve": "vite serve",
-    "build": "vite build",
-    "build:docs": "vite build --mode docs"
+    "build:theme": "rimraf theme-chalk && gulp --require @esbuild-kit/cjs-loader",
+    "build:component": "rimraf es lib && esno build.ts",
+    "build": "npm run build:component && npm run build:theme",
+    "play:serve": "pnpm run -C example2 serve",
+    "play": "pnpm run -C example2 build",
+    "build:docs": "vite build --mode docs",
+    "build:theme1": "echo theme1",
+    "build:theme2": "echo theme2",
+    "start": "gulp --require @esbuild-kit/cjs-loader"
   },
   "sideEffects": false,
   "keywords": [],
@@ -21,27 +28,35 @@
   "license": "ISC",
   "dependencies": {
     "element-resize-detector": "^1.2.4",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "vue": "2.7.14"
   },
   "peerDependencies": {
     "element-ui": "^2.15.13",
-    "vue": "^2.6.11"
+    "vue": "2.7.14"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rookie-ui/directive": "workspace:^1.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue2": "^2.2.0",
+    "babel-plugin-component": "^1.1.1",
     "element-ui": "^2.15.13",
     "sass": "^1.58.3",
     "vite": "^4.1.4",
-    "vue": "^2.6.11",
+    "vue": "2.7.14",
     "vue-router": "^3.6.5"
   },
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "dist",
-    "components",
-    "directive",
-    "index.js"
+    "src",
+    "index.js",
+    "es",
+    "lib",
+    "theme-chalk"
   ]
 }

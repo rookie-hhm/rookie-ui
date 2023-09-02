@@ -127,8 +127,8 @@ import {
 import rightImg from './assets/right.png';
 import { noop } from '../../utils/declaration';
 import { isFunction, flattenDeep } from 'lodash-es';
-import infotooltip from '../../directive/info-tooltip'
-
+// import infoTooltip from '../../directive/info-tooltip'
+import { infoTooltip as infotooltip } from '@rookie-ui/directive'
 export default {
   name: 'my-table',
   directives: {
@@ -270,22 +270,22 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.my-table-wrapper {
-  ::v-deep {
-    th > .cell {
-      /* 头部不换行 */
-      white-space: nowrap;
-      /* 排序的按钮样式 */
-      .caret-wrapper {
-        height: 20px !important;
-        .ascending {
-          top: -1px;
-        }
-        .descending {
-          bottom: -1px;
-        }
-      }
-    }
-  }
-}
+// .my-table-wrapper {
+//   ::v-deep {
+//     th > .cell {
+//       /* 头部不换行 */
+//       white-space: nowrap;
+//       /* 排序的按钮样式 */
+//       .caret-wrapper {
+//         height: 20px !important;
+//         .ascending {
+//           top: -1px;
+//         }
+//         .descending {
+//           bottom: -1px;
+//         }
+//       }
+//     }
+//   }
+// }
 </style>

@@ -44,7 +44,8 @@ import { isFunction } from 'lodash-es'
 import { formConfig, formItemConfig, normalizeFormConfig } from './default'
 import { mergeConfig, getComponentName, mergeComponentAttrs } from '../../utils/mergeConfig';
 import MySelect from '../Select'
-import infotooltip from '../../directive/info-tooltip'
+// import infotooltip from '../../directive/info-tooltip'
+import { infoTooltip as infotooltip } from '@rookie-ui/directive'
 export default {
   name: 'my-form',
   components: {
@@ -173,13 +174,13 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
-.form-wrapper {
-  font-size: 12px !important;
-  ::v-deep .el-form-item__label {
-    padding-right: 4px;
-  }
-  ::v-deep .el-form-item--mini.el-form-item, .el-form-item--small.el-form-item {
-    margin-bottom: 5px;
-  }
-}
+// .form-wrapper {
+//   font-size: 12px !important;
+//   ::v-deep .el-form-item__label {
+//     padding-right: 4px;
+//   }
+//   ::v-deep .el-form-item--mini.el-form-item, .el-form-item--small.el-form-item {
+//     margin-bottom: 5px;
+//   }
+// }
 </style>

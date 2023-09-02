@@ -74,13 +74,13 @@ export default {
     handleSizeChange(val) {
       this.$emit('pagination', { page: this.currentPage, limit: val })
       if (this.autoScroll) {
-        // scrollTo(0, 800)
+        scrollTo(0, 800)
       }
     },
     handleCurrentChange(val) {
       this.$emit('pagination', { page: val, limit: this.pageSize })
       if (this.autoScroll) {
-        // scrollTo(0, 800)
+        scrollTo(0, 800)
       }
     }
   }
@@ -88,12 +88,5 @@ export default {
 </script>
 
 <style scoped>
-.pagination-container {
-  background: #fff;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-.pagination-container.hidden {
-  display: none;
-}
+
 </style>

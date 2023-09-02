@@ -1,0 +1,16 @@
+.my-table-wrapper {
+  th > .cell {
+    /* 头部不换行 */
+    white-space: nowrap;
+    /* 排序的按钮样式 */
+    .caret-wrapper {
+      height: 20px !important;
+      .ascending {
+        top: -1px;
+      }
+      .descending {
+        bottom: -1px;
+      }
+    }
+  }
+}
