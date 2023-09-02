@@ -28,7 +28,7 @@
     "@fullcalendar/core": "^5.10.1",
     "@fullcalendar/daygrid": "^5.10.1",
     "@fullcalendar/interaction": "^5.10.1",
-    "@rookie-ui/element-plus": "workspace:^1.0.0",
+    "@rookie-ui/utils": "workspace:^1.0.1",
     "async-validator": "^4.2.5",
     "axios": "^0.24.0",
     "lodash": "^4.17.21",

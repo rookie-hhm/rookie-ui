@@ -9,7 +9,8 @@
     "build:directive": "pnpm run -C packages/directive build",
     "build:util": "pnpm run -C packages/utils build",
     "build:element-plus": "pnpm run -C packages/element-plus build:vite",
-    "build:element-ui": "pnpm run -C packages/element-ui build"
+    "build:element-ui": "pnpm run -C packages/element-ui build",
+    "build": "pnpm run build:util && pnpm run build:element-ui && pnpm run build:element-plus"
   },
   "keywords": [],
   "author": "",

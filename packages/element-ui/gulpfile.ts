@@ -54,6 +54,7 @@ const removeExtraCssFile = async () => {
   console.log(typeof sync)
   fse.removeSync(path.join(esPath, 'es/index.css'))
   fse.removeSync(path.join(esPath, 'lib/index.css'))
+  fse.removeSync(path.join(__dirname, 'theme-chalk'))
   // sync([
   //   path.join(esPath, 'es/index.css'),
   //   path.join(esPath, 'lib/index.css')

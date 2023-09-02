@@ -42,7 +42,7 @@
       "@rookie-directive/*": [
         "./packages/directive/*"
       ],
-      "*": ["node_modules/*"]
+      // "*": ["node_modules/*"]
       // "element-plus": ["node_modules/element-plus"],
 
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */

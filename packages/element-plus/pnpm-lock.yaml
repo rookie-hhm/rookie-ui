@@ -6,6 +6,7 @@ specifiers:
   '@fullcalendar/daygrid': ^5.10.1
   '@fullcalendar/interaction': ^5.10.1
   '@rookie-ui/element-plus': workspace:^1.0.0
+  '@rookie-ui/utils': workspace:^1.0.1
   '@types/lodash': ^4.14.191
   '@types/mockjs': ^1.0.7
   '@vitejs/plugin-vue': ^4.0.0
@@ -27,6 +28,7 @@ dependencies:
   '@fullcalendar/daygrid': 5.11.4
   '@fullcalendar/interaction': 5.11.4
   '@rookie-ui/element-plus': 'link:'
+  '@rookie-ui/utils': link:../utils
   async-validator: 4.2.5
   axios: 0.24.0
   lodash: 4.17.21
