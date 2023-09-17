@@ -1,6 +1,6 @@
 {
   "name": "@rookie-ui/element-ui",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "description": "rookie-ui二次封装element-ui组件库",
   "main": "lib/index.js",
   "module": "es/index.js",

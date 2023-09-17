@@ -22,6 +22,7 @@ import EaProgress from './components/progress';
 // import AgelRadio from './components/AgelRadio';
 // import AgelMenu from './components/AgelMenu';
 // import AgelTable from './components/AgelTable';
+console.log(1, 2)
 const components = [
   EaButton,
   EaIcon,

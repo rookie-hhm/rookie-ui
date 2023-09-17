@@ -1,6 +1,6 @@
 {
   "name": "@rookie-ui/utils",
-  "version": "2.0.1",
+  "version": "4.0.0",
   "description": "rookie-ui utils lib",
   "main": "dist/es/index.js",
   "module": "dist/es/index.js",
