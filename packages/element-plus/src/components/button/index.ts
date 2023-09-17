@@ -1,4 +1,4 @@
-import _Button from './button.vue';
+import _Button from './src/button.vue';
 import { withInstall } from '@rookie-ui/utils';
-export const Button = withInstall(_Button);
-export default Button;
+export const EaButton = withInstall(_Button);
+export default EaButton;

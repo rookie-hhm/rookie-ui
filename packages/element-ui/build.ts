@@ -36,18 +36,6 @@ const singleOptions = (name) => ({
       entryFileNames: '[name].js',
       dir: `./es/${name}`,
       exports: "named",
-      // plugins: [getBabelOutputPlugin({
-      //   presets: ['@babel/preset-env'],
-      //   plugins: [
-      //     [
-      //       "component",
-      //       {
-      //         "libraryName": "element-ui",
-      //         "styleLibraryName": "theme-chalk"
-      //       }
-      //     ]
-      //   ]
-      // })]
     },
     {
       format: 'cjs',
@@ -71,18 +59,6 @@ const allConfig = {
           entryFileNames: '[name].js',
           dir: `./es`,
           exports: "named",
-          // plugins: getBabelOutputPlugin({
-          //   presets: ['@babel/preset-env'],
-          //   plugins: [
-          //     [
-          //       "component",
-          //       {
-          //         "libraryName": "element-ui",
-          //         "styleLibraryName": "theme-chalk"
-          //       }
-          //     ]
-          //   ]
-          // })
         },
         {
           format: 'cjs',
@@ -159,9 +135,6 @@ const buildLib = async () => {
   for (const name of components) {
     // 构建单组件
     await buildSingle(name)
-
-    // 生成组件的 package.json 文件
-    // createPackageJson(name)
   }
   // 删除打包目录下的style.css文件
   const esStyle = path.resolve(__dirname, 'es/style.css')

@@ -1,0 +1,33 @@
+.ea-table {
+  color: black;
+}
+
+.edit {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 2px;
+  left: 12px;
+  cursor: pointer;
+}
+.action-icon {
+  display: flex;
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-left: 8px;
+    position: relative;
+    top: 8px;
+    cursor: pointer;
+  }
+  .check {
+    color: red;
+  }
+  .close {
+    color: green;
+  }
+}
+.pagination {
+  margin-top: 16px;
+  display: flex;
+}

@@ -1,4 +1,4 @@
-import _Icon from './icon.vue';
+import _Icon from './src/index.vue';
 import { withInstall } from '@rookie-ui/utils';
-export const Icon = withInstall(_Icon);
-export default Icon;
+export const EaIcon = withInstall(_Icon);
+export default EaIcon;

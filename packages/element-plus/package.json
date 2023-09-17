@@ -1,16 +1,10 @@
 {
   "name": "@rookie-ui/element-plus",
-  "version": "1.0.0",
+  "version": "2.2.2",
   "description": "",
   "main": "dist/lib/index.js",
   "module": "dist/es/index.mjs",
   "types": "dist/es/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/lib/index.js",
-      "module": "./dist/es/index.mjs"
-    }
-  },
   "scripts": {
     "serve": "vite serve",
     "build:start": "gulp -f ./script/build.ts --require @esbuild-kit/cjs-loader",
@@ -18,21 +12,19 @@
     "build": "gulp -f ./script/vite-build.ts --require @esbuild-kit/cjs-loader",
     "build:vite": "vite build",
     "build:new": "rimraf dist && esno script/new-build.ts",
-    "build:new1": "rimraf dist && esno ./build.ts"
+    "build:new1": "rimraf dist && esno ./build.ts",
+    "build:my": "gulp --require @esbuild-kit/cjs-loader",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@element-plus/icons": "^0.0.11",
-    "@fullcalendar/core": "^5.10.1",
-    "@fullcalendar/daygrid": "^5.10.1",
-    "@fullcalendar/interaction": "^5.10.1",
-    "@rookie-ui/utils": "workspace:^1.0.1",
-    "async-validator": "^4.2.5",
-    "axios": "^0.24.0",
-    "lodash": "^4.17.21",
-    "wangeditor": "^4.7.15"
+    "@rookie-ui/utils": "workspace:*",
+    "element-plus": "^2.3.12",
+    "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "element-plus": "^2.2.32",
@@ -43,11 +35,24 @@
     "@types/mockjs": "^1.0.7",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vitest/coverage-v8": "^0.34.4",
     "cross-env": "^7.0.3",
     "element-plus": "^2.2.32",
     "mockjs": "^1.1.0",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-element-plus": "^0.8.0",
+    "unplugin-vue-components": "^0.25.2",
     "vue": "^3.2.36",
     "vue-router": "^4.0.13",
     "vue-tsc": "^1.2.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "src",
+    "package.json",
+    "global.d.ts"
+  ]
 }

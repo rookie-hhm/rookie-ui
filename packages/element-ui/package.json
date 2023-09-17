@@ -1,15 +1,9 @@
 {
   "name": "@rookie-ui/element-ui",
-  "version": "1.0.10",
+  "version": "2.0.0",
   "description": "rookie-ui二次封装element-ui组件库",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "exports": {
-    ".": {
-      "import": "./es/index.js",
-      "require": "./lib/index.js"
-    }
-  },
   "scripts": {
     "serve": "vite serve",
     "build:theme": "rimraf theme-chalk && gulp --require @esbuild-kit/cjs-loader",
@@ -39,7 +33,7 @@
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
     "@rollup/plugin-babel": "^6.0.3",
-    "@rookie-ui/directive": "workspace:^1.0.0",
+    "@rookie-ui/directive": "workspace:*",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue2": "^2.2.0",
     "babel-plugin-component": "^1.1.1",
@@ -54,9 +48,9 @@
   },
   "files": [
     "src",
-    "index.js",
     "es",
     "lib",
-    "theme-chalk"
+    "theme-chalk",
+    "package.json"
   ]
 }

@@ -31,7 +31,7 @@
 //     }
 //   }
 // })
-
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
@@ -39,13 +39,30 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // @ts-ignore
 import DefineOptions from 'unplugin-vue-define-options/vite';
 import path from 'path';
+import pkg from './package.json'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import ElementPlus from 'unplugin-element-plus/vite'
+const external: string[] = Object.keys(pkg.dependencies).concat(Object.keys(pkg.devDependencies))
 export default defineConfig({
+  test: {
+    globals: true,
+    environment: "happy-dom",
+    coverage: {
+      reporter: ['text', 'json'],
+    },
+  },
   build: {
     //压缩
+    sourcemap: true,
     //minify: false,
     rollupOptions: {
       //忽略打包vue文件
-      external: ['vue'],
+    treeshake: {
+      moduleSideEffects: false
+    },
+    external: ['vue', 'element-plus', /^@vue/, /^@element-plus\/(.*)/, '@rookie-ui/utils', /^lodash(.*)/],
       input: ['./src/index.ts'],
       output: [
         {
@@ -55,8 +72,9 @@ export default defineConfig({
           entryFileNames: '[name].mjs',
           //让打包目录和我们目录对应
           preserveModules: true,
+          exports: "named",
           preserveModulesRoot: path.resolve(__dirname, 'src'),
-          exports: 'named',
+          // exports: 'named',
           //配置打包根目录
           dir: 'dist/es'
         },
@@ -90,23 +108,12 @@ export default defineConfig({
       tsConfigFilePath: '../../tsconfig.json'
     }),
     DefineOptions(),
-    // {
-    //   name: 'style',
-    //   generateBundle(config, bundle) {
-    //     //这里可以获取打包后的文件目录以及代码code
-    //     const keys = Object.keys(bundle);
-
-    //     for (const key of keys) {
-    //       const bundler: any = bundle[key as any];
-    //       //rollup内置方法,将所有输出文件code中的.less换成.css,因为我们当时没有打包less文件
-
-    //       this.emitFile({
-    //         type: 'asset',
-    //         fileName: key, //文件名名不变
-    //         source: bundler.code.replace(/\.scss/g, '.css')
-    //       });
-    //     }
-    //   }
-    // }
+    // ElementPlus({}),
+    // AutoImport({
+    //   resolvers: [ElementPlusResolver()],
+    // }),
+    // Components({
+    //   resolvers: [ElementPlusResolver()],
+    // }),
   ]
 });

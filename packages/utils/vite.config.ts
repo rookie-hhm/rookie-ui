@@ -7,6 +7,7 @@ export default defineConfig({
     minify: false,
     rollupOptions: {
       input: './src/index.ts',
+      external: ['vue'],
       output: [
         {
           format: 'es',
@@ -18,16 +19,16 @@ export default defineConfig({
           dir: resolve(__dirname, './dist/es'),
           banner: '/* eslint-disable */'
         },
-        // {
-        //   format: 'cjs',
-        //   //不用打包成.mjs
-        //   entryFileNames: '[name].js',
-        //   //让打包目录和我们目录对应
-        //   preserveModules: true,
-        //   //配置打包根目录
-        //   dir: resolve(__dirname, './dist/lib'),
-        //   banner: '/* eslint-disable */'
-        // }
+        {
+          format: 'cjs',
+          //不用打包成.mjs
+          entryFileNames: '[name].js',
+          //让打包目录和我们目录对应
+          preserveModules: true,
+          //配置打包根目录
+          dir: resolve(__dirname, './dist/lib'),
+          banner: '/* eslint-disable */'
+        }
       ]
     },
     lib: {
@@ -40,7 +41,7 @@ export default defineConfig({
     dts({
       outputDir: [
         resolve(__dirname, './dist/es'),
-        // resolve(__dirname, './dist/lib')
+        resolve(__dirname, './dist/lib')
       ],
       compilerOptions: {
         declaration: true,
